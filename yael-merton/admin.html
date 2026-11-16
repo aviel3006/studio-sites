@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ניהול · יעל מרטון</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F6F0EA">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>:root { --polish: #C27A8E; }</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sc" viewBox="0 0 400 400">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="55" cy="134" r="5"/><circle cx="55" cy="146" r="5"/>
+      <path d="M59.5 136.5L92 143.5M59.5 143.5L92 136.5"/>
+    </g>
+  </symbol>
+  <symbol id="logo-full" viewBox="0 0 400 400">
+    <circle cx="200" cy="200" r="192" fill="#100C0E" stroke="currentColor" stroke-width="6"/>
+    <text x="200" y="112" text-anchor="middle" fill="currentColor" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="600" font-size="31" direction="ltr">Little details, big love</text>
+    <use href="#sc" width="400" height="400"/>
+    <path d="M98 140H330" stroke="currentColor" stroke-width="2" stroke-dasharray="9 6"/>
+    <text x="332" y="132" text-anchor="end" fill="currentColor" font-family="Heebo, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".5" direction="ltr">CUT HAIR</text>
+    <text x="200" y="230" text-anchor="middle" textLength="318" lengthAdjust="spacingAndGlyphs" fill="currentColor" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="58" direction="ltr"><tspan font-size="82" dy="4">Y</tspan><tspan dy="-4">AEL MERTON</tspan></text>
+    <text x="200" y="272" text-anchor="middle" fill="currentColor" font-family="'Varela Round', Heebo, sans-serif" font-size="30" direction="rtl">סטודיו לציפורניים</text>
+    <g transform="matrix(-1 0 0 1 400 160)"><use href="#sc" width="400" height="400"/></g>
+    <path d="M70 300H302" stroke="currentColor" stroke-width="2" stroke-dasharray="9 6"/>
+    <text x="68" y="292" text-anchor="start" fill="currentColor" font-family="Heebo, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".5" direction="ltr">CUT HAIR</text>
+  </symbol>
+  <symbol id="logo-mini" viewBox="0 0 24 24"><path d="M12 2.5c3 .3 4.6 4.4 4.6 9.2l-.7 8.6Q12 22.4 8.1 20.3l-.7-8.6C7.4 6.9 9 2.8 12 2.5z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6L20 18M8.6 16.4L20 6"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></symbol>
+</svg>
+
+<!-- כניסה -->
+<div class="login" id="loginView" hidden>
+  <form class="msg-form login-card" id="loginForm" novalidate>
+    <a class="brand" href="index.html"><svg class="brand-logo" aria-hidden="true"><use href="#logo-mini"/></svg><span class="brand-text"><b class="brand-word">יעל מרטון</b><small>ניהול</small></span></a>
+    <h3>כניסה לניהול</h3>
+    <p>תורים, תמונות והודעות – הכל במקום אחד.</p>
+    <p class="demo-note" id="demoNote" hidden>מצב הדגמה: כל אימייל וסיסמה יעבדו. הנתונים נשמרים רק בדפדפן הזה.</p>
+    <label class="field"><span>אימייל</span><input name="email" type="email" autocomplete="username" required></label>
+    <label class="field"><span>סיסמה</span><input name="password" type="password" autocomplete="current-password" required></label>
+    <button class="btn btn-primary btn-block" type="submit">כניסה</button>
+  </form>
+</div>
+
+<!-- לוח ניהול -->
+<div id="appView" hidden>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="index.html" title="לאתר"><svg class="brand-logo" aria-hidden="true"><use href="#logo-mini"/></svg><span class="brand-text"><b class="brand-word">יעל מרטון</b><small>ניהול</small></span></a>
+      <span class="pill demo" id="demoPill" hidden>מצב הדגמה</span>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn" type="button">יציאה</button>
+    </div>
+  </header>
+
+  <main class="wrap adm-main">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="appts" aria-selected="true">תורים</button>
+      <button class="tab" role="tab" data-tab="gallery" aria-selected="false">תמונות</button>
+      <button class="tab" role="tab" data-tab="messages" aria-selected="false">הודעות<span class="count" id="msgCount" hidden></span></button>
+      <button class="tab" role="tab" data-tab="settings" aria-selected="false">הגדרות</button>
+    </div>
+
+    <!-- תורים -->
+    <section class="panel" id="p-appts" role="tabpanel">
+      <div class="daybar">
+        <button class="iconbtn" id="dayPrev" type="button" aria-label="היום הקודם"><svg class="i flip"><use href="#i-arrow"/></svg></button>
+        <input class="in" type="date" id="dayInput" aria-label="בחירת תאריך">
+        <button class="iconbtn" id="dayNext" type="button" aria-label="היום הבא"><svg class="i"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn-ghost btn-sm" id="todayBtn" type="button">היום</button>
+      </div>
+      <h2 class="day-label" id="dayLabel"></h2>
+      <div class="summary" id="apptSummary"></div>
+      <div id="apptList"></div>
+
+      <details class="card">
+        <summary>+ הוספת תור ידני / חסימת שעה</summary>
+        <form id="addApptForm" class="fields">
+          <label class="field"><span>שירות</span><select class="in" name="service" id="svcSelect"></select></label>
+          <label class="field"><span>שעה</span><input class="in" type="time" name="slot" step="300" required></label>
+          <label class="field"><span>שם (ריק = חסימה)</span><input class="in" name="cname" maxlength="60"></label>
+          <label class="field"><span>טלפון (לא חובה)</span><input class="in" name="cphone" type="tel" maxlength="16"></label>
+          <label class="field wide"><span>הערה</span><input class="in" name="cnote" maxlength="300"></label>
+          <div class="field wide"><button class="btn btn-primary" type="submit">הוספה ליום הזה</button></div>
+        </form>
+      </details>
+    </section>
+
+    <!-- תמונות -->
+    <section class="panel" id="p-gallery" role="tabpanel" hidden>
+      <label class="field" style="margin-bottom:14px"><span>כיתוב לתמונות שיועלו (לא חובה)</span><input class="in" id="captionInput" maxlength="40" placeholder="למשל: פייד נמוך"></label>
+      <label class="drop" id="drop">
+        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        <svg class="i"><use href="#i-upload"/></svg>
+        <b>העלאת תמונות</b>
+        <span>לחיצה לבחירה מהגלריה בטלפון, או גרירה לכאן. אפשר כמה ביחד.</span>
+      </label>
+      <p class="upload-status" id="uploadStatus" aria-live="polite"></p>
+      <div class="adm-gallery" id="admGallery"></div>
+    </section>
+
+    <!-- הודעות -->
+    <section class="panel" id="p-messages" role="tabpanel" hidden>
+      <div id="msgList"></div>
+    </section>
+
+    <!-- הגדרות -->
+    <section class="panel" id="p-settings" role="tabpanel" hidden>
+      <div class="card">
+        <h3>מחירון</h3>
+        <div id="svcList"></div>
+        <div class="row-actions"><button class="btn btn-ghost btn-sm" id="addSvc" type="button">+ שירות חדש</button></div>
+      </div>
+      <div class="card">
+        <h3>שעות פתיחה</h3>
+        <div id="hoursList"></div>
+        <div class="row-actions"><button class="btn btn-primary btn-sm" id="saveHours" type="button">שמירת שעות</button></div>
+      </div>
+      <div class="card">
+        <h3>ימים סגורים</h3>
+        <p class="muted" style="margin-top:0">חופשה, חג או מילואים – היום ייחסם לקביעת תורים.</p>
+        <form class="inline-form" id="blockForm">
+          <input class="in" type="date" name="day" required aria-label="תאריך">
+          <input class="in" name="reason" maxlength="60" placeholder="סיבה (לא חובה)">
+          <button class="btn btn-primary btn-sm" type="submit">חסימת היום</button>
+        </form>
+        <ul class="block-list" id="blockList"></ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
