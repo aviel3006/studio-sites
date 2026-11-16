@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Idan Football · המרכז לאימוני כדורגל אישיים</title>
+  <meta name="description" content="Idan Football – המרכז לאימוני כדורגל אישיים בישראל. אימונים אישיים וקבוצות קטנות. קביעת אימון אונליין בכמה שניות.">
+  <meta name="theme-color" content="#F3EADA">
+  <meta property="og:title" content="Idan Football · המרכז לאימוני כדורגל אישיים">
+  <meta property="og:description" content="אימונים אישיים ופיתוח שחקנים · קובעים אימון אונליין.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;0,900;1,800;1,900&family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>:root { --kit: #D3121B; --on-kit: #FFFFFF; }</style>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="ball-shade" cx=".36" cy=".3" r=".75">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".55" stop-color="#ECE8DF"/>
+      <stop offset="1" stop-color="#948E82"/>
+    </radialGradient>
+  </defs>
+
+  <symbol id="ball" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="47" fill="url(#ball-shade)"/>
+    <path d="M50 33l16 11.6-6.1 18.8H40.1L34 44.6z" fill="#13203A"/>
+    <path d="M50 3.5c-6 1-11.4 3.3-16 6.7l3 8.2L50 22l13-3.6 3-8.2C61.4 6.8 56 4.5 50 3.5z" fill="#13203A"/>
+    <path d="M89.5 33c-1.8-5.6-5-10.6-9-14.7l-8.4 2.4-.2 13.6 8 11.2 9.4-.5c.8-4 .9-8 .2-12z" fill="#13203A"/>
+    <path d="M10.5 33c1.8-5.6 5-10.6 9-14.7l8.4 2.4.2 13.6-8 11.2-9.4-.5c-.8-4-.9-8-.2-12z" fill="#13203A"/>
+    <path d="M24 86.6c4.6 3.6 10 6 15.8 7l5-7.7-4.4-13-13-4.2-6.4 6.2c.4 4 1.4 8 3 11.7z" fill="#13203A"/>
+    <path d="M76 86.6c-4.6 3.6-10 6-15.8 7l-5-7.7 4.4-13 13-4.2 6.4 6.2c-.4 4-1.4 8-3 11.7z" fill="#13203A"/>
+    <path d="M50 33V22M66 44.6l6-10.3M59.9 63.4l13.2 5.9M40.1 63.4l-13.2 5.9M34 44.6l-6-10.3" stroke="#13203A" stroke-width="2.2"/>
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#13203A" stroke-width="3"/>
+    <ellipse cx="36" cy="27" rx="13" ry="7" fill="#fff" opacity=".55" transform="rotate(-30 36 27)"/>
+  </symbol>
+
+  <!-- סמל המועדון: מגן עם ראשי התיבות -->
+  <symbol id="crest" viewBox="0 0 100 118">
+    <path d="M50 4L92 16V56C92 84 72 102 50 114C28 102 8 84 8 56V16Z" style="fill:var(--kit)" stroke="#13203A" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M50 16L80 25V56C80 76 66 90 50 99C34 90 20 76 20 56V25Z" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.5"/>
+    <text x="50" y="74" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="40" letter-spacing="1" style="fill:var(--on-kit)" direction="ltr">IF</text>
+  </symbol>
+
+  <!-- אייקונים של קלפי היכולות -->
+  <symbol id="sk-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l4 3-1.5 4.5h-5L8 10.5z"/><path d="M12 3v4.5M16 10.5l4.4-1.6M14.5 15l2.7 3.8M9.5 15l-2.7 3.8M8 10.5L3.6 8.9"/></symbol>
+  <symbol id="sk-goal" viewBox="0 0 24 24"><path d="M2 19V6h20v13"/><path d="M6 6v13M10 6v13M14 6v13M18 6v13M2 10h20M2 14.5h20" stroke-opacity=".35"/></symbol>
+  <symbol id="sk-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="sk-pass" viewBox="0 0 24 24"><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="7" r="2.5"/><path d="M7.5 15.5C11 11 13 9 16.5 8" stroke-dasharray="2 2.6"/><path d="M13.5 6.5l3 1.5-1.6 3"/></symbol>
+  <symbol id="sk-foot" viewBox="0 0 24 24"><path d="M4 16c0-3 2-5 5-5h2l2-6h4l-1 8c2 .5 4 2 4 4v2H4z"/><path d="M4 19h16M8 19v2M13 19v2M18 19v2"/></symbol>
+  <symbol id="sk-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="sk-glove" viewBox="0 0 24 24"><path d="M7 21v-4L4 13V9a1.5 1.5 0 0 1 3 0v2V5a1.5 1.5 0 0 1 3 0v5V4a1.5 1.5 0 0 1 3 0v6V5.5a1.5 1.5 0 0 1 3 0V11l1-1.5a1.6 1.6 0 0 1 2.6 1.8L17 17v4z"/><path d="M7 18h10"/></symbol>
+  <symbol id="sk-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+  <symbol id="sk-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2.5 2.5 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></symbol>
+
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r=".5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h11"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3c5 0 7 10 12 10h3M3 17h3c2 0 3.4-1.6 4.6-3.6M13.4 9.6C14.6 7.6 16 7 18 7h3M18 4l3 3-3 3M18 14l3 3-3 3"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="Idan Football – לראש העמוד">
+      <svg class="brand-crest" aria-hidden="true"><use href="#crest"/></svg>
+      <span><b class="brand-name">Idan Football</b><small class="brand-sub">המרכז לאימוני כדורגל אישיים</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="ניווט ראשי">
+      <a href="#services">אימונים</a>
+      <a href="#challenge">האתגר</a>
+      <a href="#method">השיטה</a>
+      <a href="#booking">קביעת אימון</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+    <a class="btn btn-kit btn-sm hide-sm" href="#booking">לקביעת אימון</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="תפריט" aria-expanded="false" aria-controls="nav">
+      <svg class="i"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO: עטיפת אלבום + חבילת קלפים ===== -->
+  <section class="hero">
+    <p class="hero-ghost" aria-hidden="true" dir="ltr">IDAN FOOTBALL</p>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="stamp-tag"><span>אימונים אישיים ופיתוח שחקנים</span><span>ישראל</span></p>
+        <h1 class="hero-title"><span class="ht-a">המגרש של</span> <span class="ht-b">עידן</span></h1>
+        <p class="hero-lead">מתחילים באבחון ראשוני: גיל, תפקיד על המגרש והמועדון שבו השחקן משחק. משם בונים תוכנית אימונים מקצועית ומדויקת, ורואים את ההבדל כבר במשחק הבא.</p>
+        <div class="hero-cta">
+          <a class="btn btn-kit" href="#booking">לקביעת אימון <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line" href="#challenge">לנסות את האתגר</a>
+        </div>
+        <ul class="hero-facts">
+          <li><b>1:1</b><span>אימון אישי</span></li>
+          <li><b dir="ltr">6–18</b><span>כל הגילאים</span></li>
+          <li><b>24/7</b><span>קביעה אונליין</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-art">
+        <div class="pack-stage" id="pack">
+          <div class="cards" id="cards">
+            <article class="card c-skill" aria-hidden="true"></article>
+            <article class="card c-skill" aria-hidden="true"></article>
+            <article class="card c-skill" aria-hidden="true"></article>
+            <article class="card c-skill" aria-hidden="true"></article>
+            <article class="card c-coach" aria-label="הקלף של Idan Football">
+              <div class="cc-in">
+                <div class="cc-top">
+                  <span class="cc-no" dir="ltr">10</span>
+                  <span class="cc-role">מאמן<br>ראשי</span>
+                </div>
+                <div class="cc-face">
+                  <svg class="cc-crest" aria-hidden="true"><use href="#crest"/></svg>
+                </div>
+                <div class="cc-name" dir="ltr">IDAN FOOTBALL</div>
+                <div class="cc-sub">המרכז לאימוני כדורגל אישיים</div>
+              </div>
+              <i class="holo" aria-hidden="true"></i>
+            </article>
+          </div>
+          <button class="pack" id="packBtn" type="button" aria-label="לפתוח את חבילת הקלפים">
+            <span class="pack-crimp top"></span>
+            <span class="pack-body">
+              <svg class="pack-crest" aria-hidden="true"><use href="#crest"/></svg>
+              <b>חבילת אימון</b>
+              <small>5 קלפים · מהדורה מיוחדת</small>
+              <em>לחצו לפתיחה</em>
+            </span>
+            <span class="pack-crimp bottom"></span>
+          </button>
+        </div>
+        <button class="btn btn-line btn-sm repack" id="repack" type="button" hidden><svg class="i"><use href="#i-shuffle"/></svg>לפתוח עוד חבילה</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="stamps" aria-hidden="true"><div class="marquee-track"><span>כדרור</span><i>✦</i><span>בעיטה לשער</span><i>✦</i><span>רגל חלשה</span><i>✦</i><span>מהירות</span><i>✦</i><span>זריזות</span><i>✦</i><span>מסירות</span><i>✦</i><span>משחק ראש</span><i>✦</i><span>ביטחון במגרש</span><i>✦</i><span>כדרור</span><i>✦</i><span>בעיטה לשער</span><i>✦</i><span>רגל חלשה</span><i>✦</i><span>מהירות</span><i>✦</i><span>זריזות</span><i>✦</i><span>מסירות</span><i>✦</i><span>משחק ראש</span><i>✦</i><span>ביטחון במגרש</span><i>✦</i></div></div>
+
+  <!-- ===== מידע מהיר ===== -->
+  <section class="wrap facts" aria-label="מידע מהיר">
+    <div class="fact" id="openStatus"><small><span class="status-dot"></span><span>היום</span></small><b>&nbsp;</b></div>
+    <div class="fact"><small>אימון החל מ־</small><b id="fromPrice">&nbsp;</b></div>
+    <a class="fact" data-biz-link="waze"><small>איפה מתאמנים</small><b id="shortAddress">&nbsp;</b></a>
+    <div class="fact fact-next" id="nextCard" hidden>
+      <small><span class="status-dot live"></span>האימון הפנוי הקרוב</small>
+      <div id="nextRows"></div>
+    </div>
+  </section>
+
+  <!-- ===== אימונים ===== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="sec-kicker"><b>01</b>עמוד האימונים</p>
+        <h2>תבחרו <em>קלף</em></h2>
+        <p>כל אימון הוא קלף. לוחצים עליו ועוברים ישר לקביעה.</p>
+      </header>
+      <div class="menu-tabs reveal" id="menuTabs" role="tablist" aria-label="אימונים לפי סוג"></div>
+      <ol class="menu" id="menu"></ol>
+      <aside class="note reveal">
+        <h3>לפני האימון</h3>
+        <ul>
+          <li>נעלי כדורגל, בקבוק מים ובגדי אימון</li>
+          <li>מגיעים 5 דקות לפני, מוכנים לשריקה</li>
+          <li>ביטול או שינוי עד 24 שעות לפני</li>
+        </ul>
+        <a class="link" data-biz-link="whatsapp">כרטיסייה או שאלה? כתבו לי ←</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== אתגר הקפיצות ===== -->
+  <section class="section challenge" id="challenge">
+    <div class="wrap challenge-grid">
+      <header class="sec-head reveal">
+        <p class="sec-kicker"><b>02</b>האתגר</p>
+        <h2>כמה קפיצות <em>תעשו?</em></h2>
+        <p>לוחצים על הכדור כדי להקפיץ אותו, ולא נותנים לו ליפול. לוחצים בצד שמאל של הכדור? הוא בורח ימינה.</p>
+        <div class="score">
+          <div><small>קפיצות</small><b id="jScore">0</b></div>
+          <div><small>השיא שלכם</small><b id="jBest">0</b></div>
+        </div>
+        <ol class="medals" id="jMedals">
+          <li data-at="5"><span>5</span>ארד</li>
+          <li data-at="10"><span>10</span>כסף</li>
+          <li data-at="20"><span>20</span>זהב</li>
+          <li data-at="35"><span>35</span>אגדה</li>
+        </ol>
+        <button class="btn btn-kit" id="jBook" type="button">את השיא האמיתי שוברים במגרש <svg class="i"><use href="#i-arrow"/></svg></button>
+      </header>
+      <div class="court reveal" id="court">
+        <div class="court-lines" aria-hidden="true"></div>
+        <div class="jshadow" id="jShadow" aria-hidden="true"></div>
+        <button class="jball" id="jBall" type="button" aria-label="להקפיץ את הכדור"><svg><use href="#ball"/></svg></button>
+        <div class="court-msg" id="jMsg"><b>לחצו על הכדור</b><small>כדי להתחיל</small></div>
+        <div class="jpop" id="jPop" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== השיטה ===== -->
+  <section class="section method" id="method">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="sec-kicker"><b>03</b>השיטה</p>
+        <h2>מהספסל <em>להרכב</em></h2>
+      </header>
+      <ol class="path">
+        <li class="reveal"><span class="path-no">1</span><h3>אימון היכרות</h3><p>בודקים איפה השחקן עומד היום: טכניקה, מהירות, שתי רגליים וקבלת החלטות.</p></li>
+        <li class="reveal"><span class="path-no">2</span><h3>תוכנית אישית</h3><p>בונים תוכנית שמתמקדת בדיוק במה שחסר, לפי הגיל והעמדה.</p></li>
+        <li class="reveal"><span class="path-no">3</span><h3>עבודה ומעקב</h3><p>מתאמנים, מצלמים ומודדים, ורואים את ההתקדמות מאימון לאימון.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== מהמגרש ===== -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <header class="sec-head sec-head-row reveal">
+        <div>
+          <p class="sec-kicker"><b>04</b>מהמגרש</p>
+          <h2>רגעים <em>מהאימונים</em></h2>
+        </div>
+        <a class="link" data-biz-link="instagram">עוד באינסטגרם ←</a>
+      </header>
+      <div class="gallery" id="gallery"></div>
+      <div class="gallery-foot">
+        <button class="btn btn-line btn-sm" id="moreBtn" type="button" hidden>עוד</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== קביעת אימון ===== -->
+  <section class="booking" id="booking">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="sec-kicker"><b>05</b>קביעת אימון</p>
+        <h2>מצטרפים <em>לקבוצה</em></h2>
+        <p>ארבעה צעדים קצרים, והאימון ביומן.</p>
+      </header>
+
+      <form class="book" id="bookForm" novalidate>
+        <div class="steps">
+          <fieldset class="step">
+            <legend><b>1</b>איזה אימון?</legend>
+            <div class="chips" id="svcChips"></div>
+          </fieldset>
+          <fieldset class="step">
+            <legend><b>2</b>באיזה יום?</legend>
+            <div class="days" id="days"></div>
+          </fieldset>
+          <fieldset class="step">
+            <legend><b>3</b>באיזו שעה?</legend>
+            <div class="slots" id="slots"></div>
+          </fieldset>
+          <fieldset class="step">
+            <legend><b>4</b>הפרטים</legend>
+            <div class="fields">
+              <label class="field"><span>שם מלא</span><input name="fullname" autocomplete="name" maxlength="60" required></label>
+              <label class="field"><span>טלפון</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" required></label>
+              <label class="field wide"><span>על השחקן (לא חובה)</span><input name="note" maxlength="300" placeholder="למשל: בן 11, משחק בקשר, רוצה לחזק רגל שמאל"></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="ticket" id="ticket" aria-label="סיכום האימון">
+          <div class="ticket-top">
+            <svg class="ticket-crest" aria-hidden="true"><use href="#crest"/></svg>
+            <span><small>כרטיס שחקן</small><b>Idan Football</b></span>
+          </div>
+          <dl class="ticket-rows">
+            <div><dt>אימון</dt><dd id="tService">—</dd></div>
+            <div><dt>יום</dt><dd id="tDay">—</dd></div>
+            <div><dt>שעה</dt><dd id="tTime">—</dd></div>
+            <div><dt>משך</dt><dd id="tDur">—</dd></div>
+          </dl>
+          <div class="ticket-total"><span>לתשלום במגרש</span><b id="tPrice">—</b></div>
+          <div class="ticket-stub">
+            <div id="stubPending">
+              <button class="btn btn-kit btn-block" id="bookBtn" type="submit">אישור וקביעת אימון</button>
+              <p class="stub-note">האימון נשמר מיד. לביטול, הודעה בוואטסאפ.</p>
+            </div>
+            <div id="stubDone" hidden>
+              <div class="stub-num"><small>מס׳ כרטיס</small><b id="tNum"></b></div>
+              <div class="stub-actions">
+                <button type="button" class="btn btn-ink btn-sm" id="icsBtn"><svg class="i"><use href="#i-cal"/></svg>הוספה ליומן</button>
+                <button type="button" class="btn btn-line btn-sm" id="againBtn">אימון נוסף</button>
+              </div>
+              <p class="stub-note" id="waNote" hidden>אישור עם השעה והמקום נשלח אליכם בוואטסאפ</p>
+            </div>
+          </div>
+          <div class="seal" aria-hidden="true"><span>נקבע!</span><small>Idan Football</small></div>
+        </aside>
+      </form>
+      <p class="sr-only" id="live" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ===== צור קשר ===== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="sec-kicker"><b>06</b>צור קשר</p>
+        <h2>דברו <em>איתי</em></h2>
+        <p>שאלה על אימונים, קבוצה של חברים או כרטיסייה? אני כאן.</p>
+      </header>
+      <div class="contact-grid">
+        <div class="info reveal">
+          <a class="info-row" data-biz-link="phone"><span class="ic"><svg class="i"><use href="#i-phone"/></svg></span><span><small>טלפון</small><b data-biz="phone" dir="ltr"></b></span></a>
+          <a class="info-row" data-biz-link="whatsapp"><span class="ic"><svg class="i"><use href="#i-wa"/></svg></span><span><small>וואטסאפ</small><b>שלחו הודעה</b></span></a>
+          <a class="info-row" data-biz-link="instagram"><span class="ic"><svg class="i"><use href="#i-ig"/></svg></span><span><small>אינסטגרם</small><b data-biz="instagram" dir="ltr"></b></span></a>
+          <a class="info-row" data-biz-link="maps"><span class="ic"><svg class="i"><use href="#i-pin"/></svg></span><span><small>מגרש</small><b data-biz="address"></b></span></a>
+          <div class="nav-btns">
+            <a class="btn btn-line btn-sm" data-biz-link="waze">ניווט ב-Waze</a>
+            <a class="btn btn-line btn-sm" data-biz-link="maps">Google Maps</a>
+          </div>
+        </div>
+        <div class="hours-card reveal">
+          <h3>שעות אימונים</h3>
+          <table class="hours"><tbody id="hoursTable"></tbody></table>
+        </div>
+        <form class="msg-form reveal" id="msgForm" novalidate>
+          <h3>השאירו הודעה</h3>
+          <p>אחזור אליכם בהקדם.</p>
+          <div class="fields">
+            <label class="field"><span>שם</span><input name="mname" autocomplete="name" maxlength="60" required></label>
+            <label class="field"><span>טלפון</span><input name="mphone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" required></label>
+            <label class="field wide"><span>הודעה</span><textarea name="mbody" maxlength="1000" required></textarea></label>
+          </div>
+          <button class="btn btn-kit btn-block" type="submit">שליחה</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <p class="footer-big" aria-hidden="true" dir="ltr">IDAN FOOTBALL</p>
+    <div class="footer-row">
+      <span>© <span id="year"></span> Idan Football · המרכז לאימוני כדורגל אישיים · ישראל</span>
+      <a class="footer-admin" href="admin.html">כניסה לניהול</a>
+    </div>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="פעולות מהירות">
+  <a data-biz-link="phone"><svg class="i"><use href="#i-phone"/></svg>חיוג</a>
+  <a class="dock-main" href="#booking">קביעת אימון</a>
+  <a data-biz-link="whatsapp"><svg class="i"><use href="#i-wa"/></svg>וואטסאפ</a>
+</nav>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="תצוגת תמונה">
+  <figure class="lb-fig"><img id="lbImg" alt=""><figcaption id="lbCap" class="lb-cap"></figcaption></figure>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="סגירה"><svg class="i"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="הקודמת"><svg class="i flip"><use href="#i-arrow"/></svg></button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="הבאה"><svg class="i"><use href="#i-arrow"/></svg></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/album.js"></script>
+
+<style>
+  .demo-pill{position:fixed;z-index:999;inset-inline:0;margin-inline:auto;top:calc(var(--top) + 10px);width:max-content;max-width:calc(100% - 32px);display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:99px;background:rgba(15,15,18,.88);backdrop-filter:blur(10px);border:1px solid var(--line-2);color:var(--text);font:500 .86rem var(--f-text);box-shadow:0 14px 30px -12px rgba(0,0,0,.8)}
+  .demo-pill a{color:#0B0B0D;background:var(--metal);text-decoration:none;font-weight:700;padding:6px 14px;border-radius:99px;white-space:nowrap}
+  .demo-pill button{all:unset;cursor:pointer;color:var(--muted);padding:0 6px;font-size:1.1rem}
+  @media (max-width:520px){.demo-pill{font-size:.78rem;padding-inline-start:12px}}
+</style>
+<div class="demo-pill" id="demoPill" role="note"><span>✦ אתר לדוגמה שהוכן במיוחד עבור Idan Football</span><button type="button" aria-label="סגירה" onclick="this.parentNode.remove()">×</button></div>
+</body>
+</html>
