@@ -46,6 +46,18 @@
   });
   $('#year').textContent = new Date().getFullYear();
 
+  /* ---------- מידע: קישור ל-#privacy / #accessibility פותח את החלון ---------- */
+  function openInfo() {
+    const d = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (d && d.matches('details.info-panel')) { d.open = true; d.scrollIntoView(); }
+  }
+  window.addEventListener('hashchange', openInfo);
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href="#privacy"], a[href="#accessibility"]');
+    if (a && location.hash === a.getAttribute('href')) openInfo();
+  });
+  openInfo();
+
   /* ---------- תפריט מובייל ---------- */
   const nav = $('#nav'), menuBtn = $('#menuBtn');
   menuBtn.addEventListener('click', () => menuBtn.setAttribute('aria-expanded', nav.classList.toggle('open')));

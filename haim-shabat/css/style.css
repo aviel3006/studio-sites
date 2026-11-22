@@ -597,16 +597,29 @@ input[type="tel"], input[type="email"], input[type="password"] { direction: ltr;
 .footer-links a { text-decoration: none; }
 .footer-links a:hover { color: var(--text); text-decoration: underline; }
 
-/* ---------- עמודי מידע: פרטיות ונגישות ---------- */
-.legal { padding-block: clamp(48px, 8vw, 96px); }
-.legal .sec-head h1 { margin: 0; font: 700 clamp(3.4rem, 8vw, 6rem)/.85 var(--f-display); }
+/* ---------- מידע: פרטיות ונגישות ---------- */
+.info-panels { display: grid; gap: 16px; max-width: 900px; }
+.info-panel { background: var(--card); border: 1.5px solid var(--line-2); border-radius: 24px; }
+.info-panel summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: clamp(18px, 3vw, 26px) clamp(20px, 4vw, 36px);
+  list-style: none; cursor: pointer; border-radius: 24px;
+}
+.info-panel summary::-webkit-details-marker { display: none; }
+.info-panel summary h3 { margin: 0; font: 700 2.4rem/1 var(--f-display); }
+.info-panel summary:hover h3 { color: var(--silver-hi); }
+.info-sign { position: relative; width: 22px; height: 22px; flex: none; }
+.info-sign::before, .info-sign::after { content: ""; position: absolute; inset: 10px 0 auto; height: 2px; border-radius: 2px; background: var(--silver); transition: transform .2s; }
+.info-sign::after { transform: rotate(90deg); }
+.info-panel[open] .info-sign::after { transform: rotate(0deg); }
+.info-panel .prose { padding: 0 clamp(20px, 4vw, 36px) clamp(20px, 4vw, 36px); }
 .prose { max-width: 70ch; color: var(--text-2); }
-.prose h2 { margin: 44px 0 10px; font: 700 2.2rem/1 var(--f-display); color: var(--text); }
+.prose h4 { margin: 32px 0 8px; font: 700 1.9rem/1 var(--f-display); color: var(--text); }
 .prose p, .prose ul { margin: 0 0 14px; }
 .prose ul { padding-inline-start: 1.2em; }
 .prose li { margin-bottom: 6px; }
 .prose strong { color: var(--text); }
-.prose .updated { margin-top: 44px; font-size: .9rem; color: var(--muted); }
+.prose .updated { margin-top: 32px; font-size: .9rem; color: var(--muted); }
 
 /* ---------- סרגל תחתון במובייל ---------- */
 .dock { display: none; }
