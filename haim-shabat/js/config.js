@@ -4,8 +4,8 @@
 window.SITE_CONFIG = {
   // חיבור ל-Supabase (Project Settings → API).
   // כל עוד השדות ריקים האתר עובד במצב הדגמה ושומר הכל בדפדפן בלבד.
-  supabaseUrl: '',
-  supabaseAnonKey: '',
+  supabaseUrl: 'https://ajfpfvxxknavtjqrnkyp.supabase.co',
+  supabaseAnonKey: 'sb_publishable_JFuSUJYXW5PUKjtsFV-M7A_38fW0qHg',
 
   business: {
     name: 'חיים שבת',
