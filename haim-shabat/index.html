@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
   <title>חיים שבת · מספרה</title>
   <meta name="description" content="חיים שבת – מעצב שיער לגברים ולנשים, העצמאות 75 קרית אתא. תספורות, זקן, צבע, גוונים והחלקות. קביעת תור אונליין בכמה שניות.">
-  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0B0B0D">
   <meta property="og:title" content="חיים שבת · מספרה">
   <meta property="og:description" content="תספורות, זקן, צבע והחלקות בקרית אתא. קובעים תור אונליין.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&family=Varela+Round&family=Heebo:wght@400;500;700;800&family=Karantina:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<a class="skip-link" href="#top">דילוג לתוכן הראשי</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="sc" viewBox="0 0 400 400">
@@ -218,6 +217,7 @@
             <div id="stubPending">
               <button class="btn btn-primary btn-block" id="bookBtn" type="submit">אישור וקביעת תור</button>
               <p class="stub-note">התור נשמר מיד. לביטול – הודעה בוואטסאפ.</p>
+              <p class="stub-note">השם והטלפון משמשים רק לניהול התור. <a href="privacy.html">מדיניות פרטיות</a></p>
             </div>
             <div id="stubDone" hidden>
               <div class="stub-num"><small>מס׳ תור</small><b id="tNum"></b></div>
@@ -267,6 +267,7 @@
             <label class="field wide"><span>הודעה</span><textarea name="mbody" maxlength="1000" required></textarea></label>
           </div>
           <button class="btn btn-primary btn-block" type="submit">שליחה</button>
+          <p class="form-note">הפרטים משמשים רק כדי לחזור אליכם. <a href="privacy.html">מדיניות פרטיות</a></p>
         </form>
       </div>
     </div>
@@ -279,7 +280,11 @@
     <p class="footer-big" aria-hidden="true">חיים שבת</p>
     <div class="footer-row">
       <span>© <span id="year"></span> חיים שבת · מספרה</span>
-      <a class="footer-admin" href="admin.html">כניסת מנהל</a>
+      <nav class="footer-links" aria-label="מידע משפטי">
+        <a href="privacy.html">מדיניות פרטיות</a>
+        <a href="accessibility.html">הצהרת נגישות</a>
+        <a href="admin.html">כניסת מנהל</a>
+      </nav>
     </div>
   </div>
 </footer>
@@ -299,7 +304,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/vendor/supabase.min.js"></script>
 <script src="js/config.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>

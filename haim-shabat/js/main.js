@@ -523,6 +523,13 @@
     if (e.key === 'Escape') closeLb();
     else if (e.key === 'ArrowLeft') openLb(lbIndex + 1);
     else if (e.key === 'ArrowRight') openLb(lbIndex - 1);
+    else if (e.key === 'Tab') {
+      // הפוקוס נשאר בתוך חלון התמונה עד שסוגרים אותו
+      const btns = [...lb.querySelectorAll('button')];
+      const i = btns.indexOf(document.activeElement);
+      e.preventDefault();
+      btns[(i + (e.shiftKey ? -1 : 1) + btns.length) % btns.length].focus();
+    }
   });
   lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
   lb.addEventListener('touchend', e => {
